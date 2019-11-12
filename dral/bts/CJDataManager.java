@@ -370,33 +370,6 @@ public class CJDataManager {
         int read;
         StringBuilder stringBuilder = new StringBuilder();
 
-        //System.out.println("here");
-
-        //System.out.println(bufferedReader.readLine());
-
-        //read = bufferedReader.read(buffer, 0, buffer.length);
-        //System.out.println("read = " + read);
-
-        /*
-        try {
-            read = bufferedReader.read(buffer, 0, buffer.length);
-            System.out.println(read);
-
-            while (read > 0) {
-                stringBuilder.append(buffer, 0, read);
-                System.out.println(stringBuilder.toString().trim());
-
-                if (stringBuilder.toString().trim().contains("NONE")) {
-                    break;
-                } else {
-                    read = bufferedReader.read(buffer, 0, buffer.length);
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        */
-
         read = bufferedReader.read(buffer, 0, buffer.length);
 
         while (read > 0) {
@@ -413,37 +386,6 @@ public class CJDataManager {
         bufferedReader.close();
 
         return stringBuilder.toString().trim();
-
-        /*
-        while (bufferedReader.ready()) {
-            stringBuilder.append(bufferedReader.readLine());
-        }
-        bufferedReader.close();
-
-        System.out.println("Finished while loop...");
-        System.out.println("Server response: " + stringBuilder.toString().trim());
-
-        return stringBuilder.toString().trim();
-        */
-
-        /*
-        DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
-        StringBuilder stringBuilder = new StringBuilder();
-        byte[] byteMessage = new byte[1024];
-        int count;
-        //String message = "";
-
-        System.out.println("Entering while loop...");
-
-        while ((count = dataInputStream.read(byteMessage)) > 0) {
-            stringBuilder.append(Arrays.toString(byteMessage));
-        }
-        dataInputStream.close();
-
-        System.out.println("Server response: " + stringBuilder.toString().trim());
-
-        return stringBuilder.toString().trim();
-        */
     }
 
     private static void handleJSONResponse(String json, Context context) throws Exception {
@@ -472,35 +414,6 @@ public class CJDataManager {
             outputStream = context.openFileOutput(filename, Context.MODE_PRIVATE);
             outputStream.write(fileObject.toString().getBytes());
             outputStream.close();
-
-            /*
-            File folder = new File(context.getFilesDir(), DATA_FOLDER);
-            if (!folder.exists()) {
-                folder.mkdir();
-            }
-
-            File file = new File("data/data/com.example.dral/" + folder.getName() + "/" + filename);
-            FileWriter fileWriter = new FileWriter(file);
-            fileWriter.append(fileObject.toString());
-            fileWriter.flush();
-            fileWriter.close();
-            */
-
-            /*
-            FileOutputStream fileOutputStream = openFileOutput(directory + DATA_FOLDER + filename, Context.MODE_PRIVATE);
-            fileOutputStream.write(fileObject.toString().getBytes());
-            fileOutputStream.close();
-            */
-
-            // save JSON string of file to a file with the filename
-            /*
-            String filepath = DATA_FOLDER + filename;
-            File file = new File(filepath);
-
-            PrintWriter printWriter = new PrintWriter(file.getName(), "UTF-8");
-            printWriter.write(fileObject.toString());
-            printWriter.close();
-            */
         }
     }
 
