@@ -108,6 +108,7 @@ public class CJMatrixMath {
         return difference;
     }
 
+    // TODO: Finish this if needed
     public double dot(CJMatrix v1, CJMatrix v2) {
         double product = 0;
 
