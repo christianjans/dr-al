@@ -12,3 +12,8 @@ Essentially, once an appropriate dataset has been found, a custom fully-connecte
 Once the classification is done, the weights and biases of the Python neural network (and any other meta data about the dataset or input methods) are transferred to the app via a JSON file. The app then reads this file and instantiates its own neural network with the same 'connections' between 'neurons' by using the same weights and biases in the same place in the network. Finally, by using a simple custom matrix object and matrix math functions, the Java neural network on the app can predict in the exact same way as the Python network did.
 
 NOTE: The files included with this README are the main files used in the app, none of the Python files are hosted here.
+
+## thanks to...
+
+- The Autism data which can be found here: https://fadifayez.com/autism-datasets/
+- The Java JSON parser which can be found here: http://www.java2s.com/Code/Jar/j/Downloadjsonsimple11jar.htm
