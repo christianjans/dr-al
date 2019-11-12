@@ -47,16 +47,6 @@ public class LauncherActivity extends AppCompatActivity {
 
         Intent intent = new Intent(LauncherActivity.this, MainActivity.class);
         startActivity(intent);
-
-        /*
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(LauncherActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        }, LAUNCHER_DISPLAY_TIMEOUT);
-        */
     }
 
     private boolean isNetworkAvailable() {
