@@ -70,13 +70,6 @@ public class DiagnosisView extends View {
         int viewWidthHalf = this.getMeasuredWidth() / 2;
         int viewHeightHalf = this.getMeasuredHeight() / 2;
 
-        /*
-        int[] origin = new int[2];
-        this.getLocationInWindow(origin);
-        int x = origin[0];
-        int y = origin[1];
-        */
-
         int radius = (viewWidthHalf > viewHeightHalf) ? viewHeightHalf - 10 : viewWidthHalf - 10;
         int x = origin[0];
         int y = origin[1];
