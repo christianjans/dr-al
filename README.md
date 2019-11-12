@@ -15,5 +15,5 @@ NOTE: The files included with this README are the main files used in the app, no
 
 ## thanks to...
 
-- The Autism data which can be found here: https://fadifayez.com/autism-datasets/
+- The Autism datasets which can be found here: https://fadifayez.com/autism-datasets/
 - The Java JSON parser which can be found here: http://www.java2s.com/Code/Jar/j/Downloadjsonsimple11jar.htm
